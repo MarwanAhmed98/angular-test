@@ -1,0 +1,38 @@
+<section class="container mx-auto my-5 flex items-center">
+    <div>
+        @for (item of productDetails.images.slice(0,4); track $index) {
+        <img class="w-[150px] mb-3 " [src]="item" alt="">
+        }
+    </div>
+    <div class="w-1/4 mx-16">
+        <div class="mb-5">
+            <owl-carousel-o [options]="customOptions">
+                @for (IMG of productDetails.images; track $index) {
+                <ng-template carouselSlide>
+                    <img class="w-full object-contain" [src]="IMG" alt="">
+                </ng-template>
+                }
+            </owl-carousel-o>
+        </div>
+    </div>
+    <div>
+        <div class="flex items-center pb-3 Star">
+            <i class="fa-solid fa-star text-yellow-300 me-1"></i>
+            <span>{{productDetails.ratingsAverage}} ({{productDetails.ratingsQuantity}})</span>
+        </div>
+        <h1 class="pb-3 font-bold">{{productDetails.title}}</h1>
+        <p class="text-[16px] capitalize  pb-3">{{productDetails.brand.slug}}</p>
+        <h2 class="text-green-600 pb-3">${{productDetails.price}}</h2>
+        <p class="text-[12px] pb-3">{{productDetails.description}}</p>
+        <div class="flex items-center">
+            <div>
+                <p class="pb-1">Quantity:{{productDetails.quantity}}</p>
+                <p> Sold:{{productDetails.sold}}</p>
+            </div>
+            <!-- <div class="ms-5">
+                <button class="btn-main hover:bg-red-800 transition-all duration-300">BUY NOW <i
+                        class="fa-solid fa-money-bill"></i></button>
+            </div> -->
+        </div>
+    </div>
+</section>

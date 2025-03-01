@@ -1,0 +1,45 @@
+{
+    "navbar": {
+        "Home": "الرئيسية",
+        "Products": "المنتجات",
+        "Brands": "العلامات التجارية",
+        "Categories": "الفئات",
+        "Signout": "تسجيل الخروج",
+        "Login": "تسجيل الدخول",
+        "Register": "إنشاء حساب",
+        "Lang": "اللغة"
+    },
+    "sections": {
+        "PopularCategories": "الفئات الشائعة",
+        "PopularProducts": "المنتجات الشائعة"
+    },
+    "categories": {
+        "Music": "الموسيقى",
+        "Men'sFashion": "أزياء الرجال",
+        "Women'sFashion": "أزياء النساء",
+        "SuperMarket": "السوبر ماركت",
+        "CookingSupplies": "مستلزمات الطبخ"
+    },
+    "search": {
+        "Search": "بحث..."
+    },
+    "products": {
+        "AddtoCart": "أضف إلى السلة",
+        "Price": "السعر"
+    },
+    "footer": {
+        "FindaStore": "ابحث عن متجر",
+        "StoreLocator": "محدد موقع المتاجر",
+        "SecureOnlineShopping": "تسوق آمن عبر الإنترنت",
+        "FollowUs": "تابعنا",
+        "FindTimberlandProductsNearYou": "ابحث عن منتجات تمبرلاند بالقرب منك",
+        "Newsletter": "النشرة الإخبارية",
+        "Receiveproductnewsandupdateinyourinbox": "استلم أخبار المنتجات والتحديثات في بريدك الإلكتروني",
+        "EmailAddress": "عنوان البريد الإلكتروني"
+    },
+    "cart":{
+        "ShopCart":"عربة التسوق",
+        "ClearCart":"إفراغ العربة",
+        "Payment":"الدفع"
+    }
+}

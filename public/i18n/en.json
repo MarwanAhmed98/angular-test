@@ -1,0 +1,37 @@
+{
+    "navbar": {
+        "Home": "Home",
+        "Products": "Products",
+        "Brands": "Brands",
+        "Categories": "Categories",
+        "Signout": "Signout",
+        "Login": "Login",
+        "Register": "Register",
+        "Lang":"Lang"
+    },
+    "sections": {
+        "PopularCategories": "Popular Categories",
+        "PopularProducts": "Popular Products"
+    },
+    "search": {
+        "Search": "Search..."
+    },
+    "products": {
+        "AddtoCart": "Add to Cart"
+    },
+    "footer": {
+        "FindaStore": "Find a Store",
+        "StoreLocator": "Store Locator",
+        "SecureOnlineShopping": "Secure Online Shopping",
+        "FindTimberlandProductsNearYou": "Find Timberland Products Near You",
+        "FollowUs": "Follow Us",
+        "Newsletter": "Newsletter",
+        "Receiveproductnewsandupdateinyourinbox": "Receive product news and updates in your inbox",
+        "EmailAddress": "Email Address"
+    },
+    "cart":{
+        "ShopCart":"Shop Cart",
+        "ClearCart":"Clear Cart",
+        "Payment":"Payment"
+    }
+}

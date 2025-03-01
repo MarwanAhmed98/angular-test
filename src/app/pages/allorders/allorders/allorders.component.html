@@ -1,0 +1,24 @@
+<section class="container mx-auto shadow p-4 w-[75%] rounded-2xl my-5">
+    <h1 class="text-center mb-3 text-3xl">My Orders</h1>
+
+    @for (order of MyCart; track order.id) {
+        @for (item of order.cartItems; track item.product.id) {
+            <div class="grid grid-cols-[10%_minmax(0,1fr)] border-b-2 mb-3">
+                <div>
+                    <img [src]="item.product.imageCover" class="w-full h-[150px] object-contain mb-2" [alt]="item.product.title">
+                </div>
+                <div class="flex justify-between items-center ms-5">
+                    <div>
+                        <h1 class="mb-3 text-xl text-green-600">{{ item.product.title.split(' ', 2).join(' ') }}</h1>
+                        <p class="mb-4 capitalize">{{ item.product.brand.slug }}</p>
+                    </div>
+                    <div class="text-green-600">
+                        <p>${{ item.price }}</p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</section>
+
+

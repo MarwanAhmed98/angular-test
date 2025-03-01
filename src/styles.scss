@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'ngx-toastr/toastr';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+@layer components {
+    .btn-main {
+        @apply bg-green-600 text-white p-2 text-[12px] rounded hover:bg-green-900 transition-all duration-300
+    }
+}
+:disabled{
+    background-color: #1f2937;
+}

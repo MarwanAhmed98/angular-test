@@ -1,0 +1,33 @@
+<section class="container mx-auto shadow p-4 w-[75%] rounded-2xl my-5">
+    <h1 class="text-center mb-3 text-3xl">{{'cart.ShopCart' | translate }}</h1>
+    <button (click)="Clear()" class="text-white bg-red-700 px-5 py-2 block ms-auto rounded-xl">{{'cart.ClearCart' | translate }}</button>
+    @for (Prod of CartDetails.products; track Prod.product._id) {
+    <div class="grid grid-cols-[10%_minmax(0,1fr)] border-b-2 mb-3">
+        <div><img [src]="Prod.product.imageCover" class="w-full h-[150px] object-contain mb-2" [alt]="Prod.product.title"></div>
+        <div class="flex justify-between items-center ms-5">
+            <div>
+                <h1 class="mb-3 text-xl text-green-600">{{Prod.product.title.split(' ',2).join(' ')}}</h1>
+                <p class="mb-4 capitalize">{{Prod.product.brand.slug}}</p>
+                <div class="flex items-center">
+                    <div class="bg-gray-100 rounded-xl flex items-center px-5 me-4 py-2">
+                        <button  (click)="UpdateItem(Prod.product._id,Prod.count-1)" class="text-black me-2 "><i class="fa-regular fa-square-minus"></i></button>
+                        <p class="text-black mx-5">{{Prod.count}}</p>
+                        <button (click)="UpdateItem(Prod.product._id,Prod.count+1)" class="text-black me-2"><i class="fa-regular fa-square-plus"></i></button>
+                    </div>
+                    <div>
+                        <button 
+                         (click)="RemoveItem(Prod.product._id)">
+                            <i class="fa-solid fa-trash text-red-700"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-green-600">
+                <p>${{Prod.price}}</p>
+            </div> 
+        </div>
+    </div>
+    }
+    <h1 class="mb-3 mt-5 ms-5 text-xl text-green-600">Total Price: ${{CartDetails.totalCartPrice}}</h1>
+    <button [routerLink]="['/Checkout', CartDetails._id]" class="btn-main text-xl ms-5 mt-4 px-16 py-2">{{'cart.Payment' | translate }}</button>
+</section>
